@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- OS "VALUES" E "NAMES" PODEM SER IGNORADOS. ELES SERÃO UTÉIS SOMENTE AO LIDAR COM JAVASCRIPT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+    <title>Form 1</title>
+</head>
+
+<!-- PRATICANDO DIFERENTES TIPOS DE INPUTS -->
+
+<body>
+    
+<form>
+    <h1>FORMULÁRIOS - INPUT TYPE</h1>
+
+    <p>Por favor preencha os campos abaixo:</p>
+    <hr>
+    
+    <!-- Exemplo de entrada Bloqueada -->
+    <input type="text" name="nome" size="35" value="Nome Completo" disabled><br><br>
+
+    Seu e-mail <input type="email" name="email" size="30" value="example@123.com"><br><br>
+
+    <!-- O TIPO INPUT "TEL" POR SI SÓ NÃO GARANTE O FORMATO DE TELEFONE; PORTANTO UTILIZAMOS UM CÓDIGO JAVASCRIPT PERSONALIZADO -->
+    telefone: <input type="tel" name="tel" maxlength="15" onkeyup="handlePhone(event)" /><br>
+
+    <br>
+    <hr>
+
+    <!-- RADIO INPUT PARA APENAS UMA OPÇÃO -->
+    <strong><mark>SEXO:</mark></strong><br><br>
+    <input type="radio" name="sexo" value="f"> Feminino</input><br><br>
+    <input type="radio" name="sexo" value="m"> Masculino</input><br><br>
+    <input type="radio" name="sexo" value="n"> Prefiro não dizer</input><br><br>
+
+    <br>
+    <hr>
+
+    <!-- RADIO INPUT PARA APENAS UMA OPÇÃO (BOLINHA) -->
+    <strong><mark>ESTADO CIVIL:</mark></strong><br><br>
+    <input type="radio" name="civil" value="s"> Solteiro(a)</input><br><br>
+    <input type="radio" name="civil" value="c"> Casado(a)</input><br><br>
+    <input type="radio" name="civil" value="v"> Viuvo(a)</input><br><br>
+
+    <hr><br>
+
+    <!-- CHECKBOX PARA VARIAS OPÇÕES -->
+    <strong><mark>BENS QUE POSSUI:</mark></strong><br><br>
+    <input type="checkbox" name="bens" value="c"> Casa</input><br><br>
+    <input type="checkbox" name="bens" value="a"> Automovel</input><br><br>
+    <input type="checkbox" name="bens" value="m"> Moto</input><br><br>
+
+    <hr><br>
+
+    <!-- SELECT PARA OPÇÕES APARECEREM AO SER SELECIONADO(SCROLL) -->
+    <strong><mark> FAIXA DE IDADE:</mark></strong><br><br>
+    <select name="faixaidade">
+        <option value="3a10">3 a 10 anos</option>
+        <option value="11a25"> 11 a 25 anos</option>
+        <option value="26a35">26 a 35 anos</option>
+        <option value="36a55">36 a 55 anos</option>
+        <option value="56a90"> 56 a 90 anos</option>
+    </select><br><br>
+
+    <br>
+    <hr>
+    <!-- SELECT PARA OPÇÕES APARECEREM AO SER SELECIONADO(SCROLL) -->
+    <strong><mark> Hobby Preferido:</mark></strong><br><br>
+    <select name="hobby">
+        <option value="livros">Ler livros</option>
+        <option value="musica"> Ouvir músicas</option>
+        <option value="cinema">Assistir filmes</option>
+        <option value="esportes">Praticar esportes</option>
+        <option value="games"> Jogar Games</option>
+    </select>
+
+    <br>
+    <hr>
+    <!-- TRATANDO DATAS -->
+    <strong><mark> DATA</mark></strong><br><br>
+    <input type="date" name="data"><br><br>
+
+    <br>
+    <hr>
+
+    <strong><mark> DATA E HORA</mark></strong><br><br>
+    <input type="datetime-local" name="data"><br><br>
+
+    <br>
+    <hr>
+
+    <strong><mark> MÊS E ANO</mark></strong><br><br>
+    <input type="month" name="mesano"><br><br>
+
+    <br>
+    <hr>
+    <!-- SELETOR DE CORES -->
+    <strong><mark> COR:</mark></strong><br><br>
+    <input type="color" name="cor"><br><br>
+
+    <br>
+    <hr>
+    <!-- PASSWORD É FUNDAMENTAL -->
+    <strong><mark> SENHA:</mark></strong><br><br>
+    <input type="password" name="senha"><br><br>
+
+    <br>
+    <hr>
+
+    <!-- LIMITAR QUANTIDADE -->
+    <strong><mark> QUANTIDADE (ENTRE 1 E 5)</mark></strong><br><br>
+    <input type="number" name="quantidade" min="1" max="5"><br><br>
+
+    <hr>
+    <br>
+
+    <!-- BARRA PARA DEFINIR O GRAU DE AFINIDADE COM A OPÇÃO ECT -->
+    <strong><mark> DEFINA SEU NÍVEL DE SATISFAÇÃO:</mark></strong><br><br>
+    POUCO SATISFEITO<input type="range" name="satifacao" min="1" max="5">MUITA SATISFAÇÃO<br><br>
+
+    <hr>
+    <br>
+
+    <!-- ANEXAÇÃO DE ARQUIVIOS -->
+    <strong><mark> ANEXAR ARQUIVO</mark></strong><br><br>
+    <input type="file" name="file"><br><br>
+
+    <hr>
+    <br>
+
+    <!-- ANEXAÇÃO DE VARIOS ARQUIVOS-->
+    <strong><mark> ANEXAR VÁRIOS ARQUIVOS</mark></strong><br><br>
+    <input type="file" name="file" multiple><br><br>
+
+    <hr>
+    <br>
+
+    <!-- TEXTAREA PARA TEXTO LONGO -->
+    <strong><mark> OBSERVAÇÕES GERAIS:</mark></strong><br><br>
+    <textarea id="obs"></textarea><br><br>
+
+    <!-- BOTÃO PARA ENVIAR AS OBSERVAÇÕES e REMOVE-LAS -->
+    <div>
+        <input type="submit" value="Enviar os dados">
+        <input type="reset" value="Limpar os dados">
+    </div>
+    
+</form>
+</body>
+
+</html>
