@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+body{
+    font-size: larger;
+    color: black;
+    background-color: rgb(243, 240, 236);
+}
+
+/* input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 10px;
+} */
